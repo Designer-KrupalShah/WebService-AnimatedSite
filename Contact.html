@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-Page</title>
+    <link rel="icon" type="image/png" href="/icon/animation.png" />
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global styles */
+        body {
+            background: #1E242A;
+            font-family: 'Bahnschrift Condensed', sans-serif;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+    
+
+        /* Header styles */
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            gap:2.5rem;
+        }
+
+        #logo {
+    float: left;
+    margin-left: 60px;
+    margin-top: 20px;
+    color: #fff;
+    font-family: 'Bahnschrift Condensed';
+    font-size: 1.9rem;
+}
+
+#menu {
+    font-family: 'Bahnschrift Condensed';
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-right: 70px;
+    margin-top: 20px;
+    font-size: 1.3rem;
+    float: right;
+}
+
+#menu ul {
+    list-style: none;
+}
+
+#menu ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+        .active {
+            background-color: #FF5733;
+            border-radius: 5px;
+            padding: 7px 15px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .active a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        .active a:hover{
+            color:green;
+            background-color: white;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        a:hover{
+            color:#FF5733;
+        }
+        .active:hover {
+            background-color: #E64A19;
+            cursor: pointer;
+            color:green;
+        }
+/* contact */
+.card  > img{
+    width :100% ;
+    height: 100%;
+}
+.card{
+    width:100%;
+    display: contents;
+}
+
+.container {
+    background-image: radial-gradient(circle, #5c0067 0%, #00d4ff 100%);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 80%;
+    height: 500px;
+
+    display: flex;
+    align-items: center;
+}
+
+.form-container {
+    padding: 20px;
+    width:100%
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+h2,label{
+    color:#5c0067;
+    font-family: cursive;
+}
+
+/* end contact */
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div id="logo">
+            <h1>WEB DESIGN</h1>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="/index.html">HOME</a></li>
+                <li><a href="/Gallery.html">GALLERY</a></li>
+                <li><a href="/About.html">ABOUT</a></li>
+                <li><a href="/OurService.html">OUR-SERVICES</a></li>
+                <li><a href="/Contact.html">CONTACT</a></li>
+                <li><a href="/Work.html">How-We-Work</a></li>
+                <li class="active"><a href="index.html">LOGOUT</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <!-- contact -->
+
+   <div class="container">
+        <div class="form-container">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <div class="input-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Your Email" required pattern="[a-zA-Z0-9._%+-]+@gmail\.com">
+                </div>
+                <div class="input-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Enter Your Message Here..." required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+            
+        </div> 
+           <div class="card">
+        <img src="/img/gal6.jpeg" />
+    </div>
+    </div>
+    
+
+    <!-- contact end -->
+
+    <script>
+        const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    
+    // Simulate form submission
+    setTimeout(() => {
+        alert("Message sent successfully!");
+        form.reset();
+    }, 1000);
+});
+
+    </script>
+</body>
+</html>

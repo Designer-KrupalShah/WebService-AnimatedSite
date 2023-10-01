@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signup-Form</title>
+<link rel="icon" href="/icon/logo.jpg" type="image/jpg" />
+<style>
+    body {
+        margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:url('/img/bg1.jpeg');
+    background-size: 100% 100%;
+    font-family: Arial, sans-serif;
+    }
+    .container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+    input[type="text"], select, textarea {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+    input[type="email"] {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+    textarea {
+        resize: vertical;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    .reset-btn {
+        background-color: #007bff;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+    button a{
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2><center>Signup Form</center></h2>
+    <form id="signup-form">
+        <input type="text" name="fullname" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" id="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="text" name="password" placeholder="Password" required>
+        <select name="gender" required>
+            <option value="" disabled selected>Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <textarea name="address" placeholder="Enter Your Address" rows="4" required></textarea>
+        <center>
+        <button type="button" class="reset-btn" onclick="resetForm()">Reset</button>
+        <button type="submit">Register</button>
+    </center>
+        <h5><center>If Already have account, Please <a href="Login.html">Login </a>here...</center></h5>
+    </form>
+</div>
+<div id="success-modal" class="modal">
+    <p>Signup Has Been Successfully!!</p>
+    <button><a href="/Login.html">OK</a></button>
+</div>
+
+
+
+<script>
+    // Client-side validation and form submission code
+    document.getElementById("signup-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        // Perform form validation here
+        if (validateForm()) {
+            showSuccessModal();
+        }
+    });
+
+    // Display the success modal
+    function showSuccessModal() {
+        document.getElementById("success-modal").style.display = "block";
+    }
+
+    // Close the success modal and reset the form
+    function closeSuccessModal() {
+        document.getElementById("success-modal").style.display = "none";
+        document.getElementById("signup-form").reset();
+    }
+
+    // Validate the form fields
+    function validateForm() {
+        // Perform your form validation checks here
+        // Return true if all checks pass, otherwise return false
+        var inputs = document.getElementById("signup-form").querySelectorAll("input");
+        for (var i = 0; i < inputs.length; i++) {
+            if (inputs[i].value === "") {
+                alert("Please fill in all fields");
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function resetForm() {
+        document.getElementById("signup-form").reset();
+    }
+
+
+    
+    
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated-Website</title>
+    <link rel="icon" type="image/png" href="/icon/animation.png" />
+</head>
+<style>
+    /* #1E242A */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1E242A;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+#box1 {
+    width: 530px;
+    height: 625px;
+    /* background: url('/img/1.jpeg'); */
+    position: absolute;
+    bottom: -100%;
+    left: 30%;
+    animation: anim 2s forwards, anim2 1.2s forwards 3s;
+    -webkit-animation: anim 2s forwards, anim2 1.2s forwards 3s;
+}
+
+#box1::after {
+    content: '';
+    position: absolute;
+    width: 530px;
+    height: 625px;
+    background: url('/img/image1.png');
+    background-size: 100% 100%;
+    /* left: 0px; */
+    left: 190px;
+    z-index: -1;
+}
+
+@keyframes anim {
+    from {
+        bottom: -100%;
+    }
+    to {
+        bottom: 0%;
+    }
+}
+
+@keyframes anim2 {
+    from {
+        left: 30%;
+        width: 530px;
+    }
+    to {
+        width: 0px;
+        left: 50%;
+    }
+}
+
+#box2 {
+    width: auto;
+    height: auto;
+    font-family: 'Bahnschrift Condensed';
+    color: #fff;
+    font-size: 10em;
+    font-weight: 500;
+    line-height: 130px;
+    position: absolute;
+    top: 250px;
+    left: 100px;
+    overflow: hidden;
+}
+
+#text {
+    position: relative;
+    left: -100%;
+    animation: anim3 2s forwards 1.2s;
+    -webkit-animation: anim3 2s forwards 1.2s;
+}
+
+@keyframes anim3 {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 0%;
+    }
+}
+
+#box3 {
+    overflow: hidden;
+}
+
+#container {
+    width: 100%;
+    position: absolute;
+    top: -100%;
+    animation: anim4 2s forwards 2s;
+    -webkit-animation: anim4 2s forwards 2s;
+}
+
+#logo {
+    float: left;
+    margin-left: 60px;
+    margin-top: 20px;
+    color: #fff;
+    font-family: 'Bahnschrift Condensed';
+    font-size: 1.9rem;
+}
+
+#menu {
+    font-family: 'Bahnschrift Condensed';
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-right: 70px;
+    margin-top: 20px;
+    font-size: 1.3rem;
+    float: right;
+}
+
+#menu ul {
+    list-style: none;
+}
+
+#menu ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+@keyframes anim4 {
+    from {
+        top: -100%;
+    }
+    to {
+        top: 2%;
+    }
+}
+
+/* Style for the logout button */
+li.active {
+  margin: 10px; /* Adjust as needed */
+  padding:7px 7px;
+  background-color: #FF5733;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+li.active a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* Hover effect */
+li.active:hover {
+  background-color: #E64A19;
+  cursor: pointer;
+}
+
+
+
+
+.active a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        .active a:hover{
+            color:green;
+            background-color: white;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        a:hover{
+            color:#FF5733;
+        }
+        .active:hover {
+            background-color: #E64A19;
+            cursor: pointer;
+            color:green;
+        }
+
+</style>
+
+
+<body>
+
+   <div id="main">
+       <div id="box1">
+
+       </div>
+
+       <div id="box2">
+           <div id="text">
+               EXTREME<br>WEB DESIGN
+           </div>
+       </div>
+
+       <div id="box3">
+           <div id="container">
+               <div id="logo">
+                   <h1>WEB DESIGN</h1>
+               </div>
+
+               <div id="menu">
+                <ul>
+                    <li><a href="/index.html">HOME</a></li>
+                    <li><a href="/Gallery.html">GALLERY</a></li>
+                    <li><a href="/About.html">ABOUT</a></li>
+                    <li><a href="/OurService.html">OUR-SERVICES</a></li>
+                    <li><a href="/Contact.html">CONTACT</a></li>
+                    <li><a href="/Work.html">How-We-Work</a></li>
+                    <li class="active"><a href="/Login.html">LOGIN</a></li>
+                </ul>
+               </div>
+           </div>
+       </div>
+   </div>
+
+</body>
+
+</html>
+</body>
+</html>

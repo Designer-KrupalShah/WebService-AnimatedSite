@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About-Page</title>
+    <link rel="icon" type="image/png" href="/icon/animation.png" />
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global styles */
+        body {
+            background: #1E242A;
+            font-family: 'Bahnschrift Condensed', sans-serif;
+            color: #fff;
+        }
+
+        /* Header styles */
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 80px;
+        }
+
+        #logo h1 {
+            font-size: 60px;
+        }
+
+
+        #menu ul {
+            list-style: none;
+            display: flex;
+        }
+
+        #menu ul li {
+            margin-right: 35px;
+            float: right;
+            font-size: 20px;
+        }
+
+        .active {
+            background-color: #FF5733;
+            border-radius: 5px;
+            padding: 7px 15px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .active a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .active a:hover {
+            color: green;
+            background-color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #FF5733;
+        }
+
+        .active:hover {
+            background-color: #E64A19;
+            cursor: pointer;
+            color: green;
+        }
+
+        /* About section styles */
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+            opacity: 1;
+            transform: translateY(10px);
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-80px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .about-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 80px;
+        }
+
+        .about-content {
+            flex: 1;
+            padding-right: 40px;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Mission section styles */
+        .mission-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 80px;
+        }
+
+        .mission-content h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .thank{
+            font-size: 2rem;
+            color: lightblue;
+            font-family: monospace;
+            font-style: oblique;
+        }
+
+
+        /* about style end */
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo">
+            <h1>WEB DESIGN</h1>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="/index.html">HOME</a></li>
+                <li><a href="/Gallery.html">GALLERY</a></li>
+                <li><a href="/About.html">ABOUT</a></li>
+                <li><a href="/OurService.html">OUR-SERVICES</a></li>
+                <li><a href="/Contact.html">CONTACT</a></li>
+                <li><a href="/Work.html">How-We-Work</a></li>
+                <li class="active"><a href="index.html">LOGOUT</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--about us page -->
+    <div class="about-section">
+        <div class="about-content">
+            <h1 class="fade-in">About Us</h1><br>
+            <p class="fade-in">Welcome to [Your Company Name], where creativity meets innovation in the world of web
+                design.
+                We're a passionate team of designers, developers, and digital enthusiasts dedicated to crafting
+                exceptional online experiences that leave a lasting impression.</p>
+            <p class="fade-in">Our team of experts is committed to delivering innovative and tailored solutions to meet
+                your needs.</p>
+        </div>
+        <div class="about-image fade-in">
+            <img src="/img/gal1.jpeg" alt="About Us Image">
+        </div>
+    </div>
+
+    <div class="mission-section">
+        <div class="mission-image fade-in">
+            <img src="/img/gal2.jpeg" alt="Mission Image">
+        </div>
+        <div class="mission-content">
+            <h2 class="fade-in">Our Mission</h2>
+            <p class="fade-in">
+                Our mission is simple yet powerful:<br> to empower businesses with captivating web solutions that elevate
+                their brand and accelerate growth.<br>
+                We believe in pushing boundaries, embracing challenges, and continuously learning to stay at the
+                forefront of design and technology.
+
+            </p>
+        </div>
+    </div>
+
+    <div class="about-section">
+        <div class="about-content">
+            <h1 class="fade-in">
+Our Story
+
+            </h1><br>
+            <p class="fade-in">
+                At the heart of our journey is a commitment to transforming ideas into reality.<br> Founded in [Year], we set out to redefine the digital landscape by delivering stunning websites that not only look beautiful but also function seamlessly. With a blend of technical expertise and creative flair, we've helped countless businesses establish a strong online presence.
+
+            </p>
+            
+        </div>
+        <div class="about-image fade-in">
+            <img src="/img/gal3.png" alt="About Us Image">
+        </div>
+    </div>
+
+    <div class="mission-section">
+        <div class="mission-image fade-in">
+            <img src="/img/gal4.jpeg" alt="Mission Image">
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="mission-content">
+            <h2 class="fade-in">
+                What Drives Us
+            </h2>
+            <p class="fade-in">
+                In a rapidly evolving digital world, we understand that your website is often the first interaction customers have with your brand. 
+                <br>That's why we pour our energy into every project, ensuring that every pixel is meticulously designed and every line of code is strategically crafted. We're fueled by the desire to create digital masterpieces that drive engagement, inspire trust, and generate tangible results.
+
+            </p>
+        </div>
+    </div>
+
+
+    <div class="about-section">
+        <div class="about-content">
+            <h1 class="fade-in">
+                Join Us on this Journey
+
+
+
+            </h1><br>
+            <p class="fade-in">
+                We invite you to join us on this exciting journey of innovation and creativity. Whether you're a startup looking for a digital debut or an established brand seeking a digital facelift, [Your Company Name] is here to turn your dreams into digital reality.
+
+            </p>
+            
+        </div>
+        <div class="about-image fade-in">
+            <img src="/img/gal5.jpeg" alt="About Us Image">
+        </div>
+    </div>
+
+   <div class="thank fade-in">
+    <center>
+        Thank You For Visiting Our Website
+    </center>
+   </div>
+   <br>
+   <hr>
+    <!-- about us page end-->
+</body>
+
+</html>

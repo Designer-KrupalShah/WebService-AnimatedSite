@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How We Work - Page</title>
+    <link rel="icon" type="image/png" href="/icon/animation.png" />
+</head>
+<style>
+    /* #1E242A */
+
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global styles */
+        body {
+            background: #1E242A;
+            font-family: 'Bahnschrift Condensed', sans-serif;
+            color: #fff;
+        }
+
+        /* Header styles */
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 80px;
+        }
+
+        #logo h1 {
+            font-size: 60px;
+        }
+    
+
+        #menu ul {
+            list-style: none;
+            display: flex;
+        }
+
+        #menu ul li {
+            margin-right: 35px;
+            float: right;
+            font-size: 20px;
+        }
+
+        .active {
+            background-color: #FF5733;
+            border-radius: 5px;
+            padding: 7px 15px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .active a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        .active a:hover{
+            color:green;
+            background-color: white;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        a:hover{
+            color:#FF5733;
+        }
+        .active:hover {
+            background-color: #E64A19;
+            cursor: pointer;
+            color:green;
+        }
+/* how we work */
+
+.section {
+            padding: 50px;
+        }
+        .step {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        .step.show {
+            opacity: 1;
+            transform: translateX(33px);
+        }
+        .step img {
+            /* max-width: 150px; */
+            width:25%;
+            height:25%;
+            margin-right: 20px;
+            transition: transform 0.5s;
+        }
+        .step:hover img {
+            transform: scale(1.1);
+        }
+        .step-content {
+            flex: 1;
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        .step:hover .step-content {
+            opacity: 0.8;
+            transform: scale(1.02);
+        }
+        .step-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .step-description {
+            font-size: 1.5rem;
+            color: aqua;
+        }
+</style>
+
+
+<body>
+
+   <div id="main">
+    <div id="header">
+        <div id="logo">
+            <h1>WEB DESIGN</h1>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="/index.html">HOME</a></li>
+                <li><a href="/Gallery.html">GALLERY</a></li>
+                <li><a href="/About.html">ABOUT</a></li>
+                <li><a href="/OurService.html">OUR-SERVICES</a></li>
+                <li><a href="/Contact.html">CONTACT</a></li>
+                <li><a href="/Help.html">How-We-Work</a></li>
+                <li class="active"><a href="index.html">LOGOUT</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+       <div class="section">
+        <div class="step">
+            <img src="/img/discovery.jpeg" alt="Step 1">
+            <div class="step-content">
+                <div class="step-title">Step 1: Discovery</div>
+                <div class="step-description">We start by understanding your goals, target audience, and design preferences. This helps us create a tailored plan for your website.</div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="step">
+            <div class="step-content">
+                <div class="step-title">Step 2: Design</div>
+                <div class="step-description">Our creative team crafts visually stunning and user-friendly designs that align with your brand identity and resonate with your audience.</div>
+            </div>
+            <img src="/img/design.png" alt="Step 2">
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="step">
+            <img src="/img/development.jpeg" alt="Step 3">
+            <div class="step-content">
+                <div class="step-title">Step 3: Development</div>
+                <div class="step-description">Our skilled developers bring the design to life, ensuring smooth functionality and seamless user experience across all devices.</div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="step">
+            <div class="step-content">
+                <div class="step-title">Step 4: Testing</div>
+                <div class="step-description">We rigorously test the website's performance, responsiveness, and compatibility to identify and resolve any issues.</div>
+            </div>
+            <img src="/img/testing.jpeg" alt="Step 4">
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="step">
+            <img src="/img/launch.jpeg" alt="Step 5">
+            <div class="step-content">
+                <div class="step-title">Step 5: Launch</div>
+                <div class="step-description">Once everything is perfect, we launch your website, making it accessible to your target audience and ready to make an impact.</div>
+            </div>
+        </div>
+    </div>
+
+   </div>
+
+<script>
+  // JavaScript to add "show" class to steps when they are in the viewport
+  document.addEventListener("DOMContentLoaded", function() {
+            const steps = document.querySelectorAll(".step");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            });
+
+            steps.forEach(step => {
+                observer.observe(step);
+            });
+        });  
+</script>
+    
+
+</body>
+</html>
